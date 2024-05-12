@@ -1,4 +1,4 @@
-# Dong-a_Univ. Enhanced forecasting of electricity demand for apartment buildings based on weather conditions 
+# Enhanced forecasting of electricity demand for apartment buildings based on weather conditions. Dong-a_Univ
 ## The First Preliminary Project of IITP
 
 ## Background of Project
@@ -28,17 +28,17 @@ and financial losses caused by excessive power supply..<br><br>
 
 
 ## Project duration and task management
-5/9-5/12 : Data collection
+Data collection 5/9-5/12  
 
-5/13-5/15 : Data preprocessing
+Data preprocessing 5/13-5/15
 
-5/16-5/19 : Model design
+Model design 5/16-5/19
 
-5/20: Model evaluation
+Model evaluation 5/20
 
-5/21-5/26 : Creating services
+Creating services 5/21-5/26
 
-5/27-6/3 : PPT and poster creation
+PPT and poster creation 5/27-6/3
 <br><br>
 ### Project period
 
