@@ -1,41 +1,47 @@
-# 동아대 IITP 예비프로젝트 1조_기상에 따른 공동주택 전력수요 예측 개선 
+# Dong-a_Univ. Enhanced forecasting of electricity demand for apartment buildings based on weather conditions 
+## The First Preliminary Project of IITP
 
-## 프로젝트의 배경
- <br>생산된 전력은 소비가 동시에 이루어진다는 특성을 가진다 
- 전력수요가 과대 예측될 경우 발전 설비에 대한 과잉 투자가 발생할 수 있고, 
- 과소 예측될 경우 전력 공급이 부족하고 불안정해질 수 있는 가능성이 커지게 된다. 
- 최근들어 심화되는 이상기후로 전력 수요 예측이 더욱 어려워지고있어 예측의 중요성이 더욱 커지고 있다.<br>
+## Background of Project
+ <br>Electricity is a commodity that must be consumed at the same time as it is generated. 
+If the demand for electricity is overestimated, overinvestment in power generation facilities may occur, 
+and if it is underestimated, there is a greater chance that the power supply will be insufficient and unstable. <br>
 
- 기상에 따른 전력수요를 예측하여 안정적인 전력공급망을 구축할 수 있다면 
- 전력공급의 부족으로 인한 정전과 같은 피해와 전력공급의 과잉으로 인한 금전적 손실을 막을 수 있을 것으로 기대한다.<br><br>
+ The importance of forecasting becomes even more important as it is becoming more difficult to predict electricity demand 
+ due to the intensifying extreme weather in recent years. 
+it is expected to prevent damages such as power outages caused by insufficient power supply 
+and financial losses caused by excessive power supply..<br><br>
 
-## 프로젝트의 목표
- <br>본 프로젝트의 1차 목표는 기후 데이터와 전력수요 데이터를 가지고 기후에 따른 공동주택 전력수요를 예측하는 모델을 만든다.
- 덧붙여 지구온난화로 인한 이상기후가 오예측을 증가시킨다는 가설을 세우고 설계한 모델에 딥러닝을 적용하여 모델을 개선하고 나아가 오예측으로 인해 발생하는 비용을 감소시키는 것을 목표로 하며.<br>
-
- 2차 목표로 트렌디한 기술(생성형 AI, Image Detection...)을 1차 목표의 인사이트와 합쳐 유용한 서비스를 제작하고 공부하는 것을 목표로 한다. <br><br>
+## The goals of the project
+ <br>The primary goal of this project is to create a model that 
+ predicts the electricity demand of apartment buildings based on climate data and electricity demand data.
  
-## 팀원 구성
+ In addition, we hypothesize that extreme weather caused by global warming will increase misprediction, 
+ and apply deep learning to the designed model to improve the model and reduce the cost of misprediction.<br>
+
+ As a secondary goal, we aim to combine trendy technologies (generative AI, image detection...) 
+ with insights from the primary goal to create and study useful services.  <br><br>
+ 
+## Team member organization
 | **조현진** | **강미수** | **김유림** | **서민제** | **하다예** |
 | :------: |  :------: | :------: | :------: | :------: | 
 </div>
 
 
-## 프로젝트 기간 및 작업 관리
-5/9-5/12 : 데이터 수집
+## Project duration and task management
+5/9-5/12 : Data collection
 
-5/13-5/15 : 데이터 전처리
+5/13-5/15 : Data preprocessing
 
-5/16-5/19 : 모델 설계
+5/16-5/19 : Model design
 
-5/20: 모델 평가
+5/20: Model evaluation
 
-5/21-5/26 : 서비스 제작
+5/21-5/26 : Creating services
 
-5/27-6/3 : PPT 및 포스터 제작
+5/27-6/3 : PPT and poster creation
 <br><br>
-### 프로젝트 기간
+### Project period
 
-- 전체 프로젝트 기간 : 2024-05-08 ~ 2024-06-03
+- Total project duration : 2024-05-08 ~ 2024-06-03
 
 <br>
