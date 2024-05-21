@@ -7,10 +7,12 @@ df = pd.read_excel("/content/spring_2020_data.xlsx")
 spring=pd.DataFrame(df)
 spring
 
+#한 공동주택의 봄 기간(2월4일~5월 4일)
 spring=spring.iloc[0:2163]
 spring
-
 len(spring)
+
+#봄,가을 데이터 개수 맞추기 위한 과정
 number=[]
 for i in range(23,2164,24):
   number.append(i)
@@ -38,6 +40,7 @@ spring.drop([2, 26, 50, 74, 98, 122, 146, 170, 194, 218, 242, 266, 290, 314, 338
 spring.drop([2084,1992,1848,1824,1728],axis=0,inplace=True)
 
 spring.drop([528,576,648,696,744,792,888,984,1032,1080],axis=0,inplace=True)
+#봄,가을 인덱스 맞추기 위함
 spring.reset_index(inplace=True)
 len(spring)
 
@@ -45,16 +48,16 @@ len(spring)
 import pandas as pd
 
 # CSV 파일에서 데이터를 불러옵니다. 파일 경로를 적절히 수정하세요.
-df = pd.read_excel("/content/full_2020_data.xlsx")
+df = pd.read_excel("/content/fall_2020_data.xlsx")
 
-full=pd.DataFrame(df)
-full
+fall=pd.DataFrame(df)
+fall
 
 
-full=full.iloc[0:1708]
-
-full.reset_index(inplace=True)
-len(full)
+fall=fall.iloc[0:1708]
+#봄,가을 인덱스 맞추기 위함
+fall.reset_index(inplace=True)
+len(fall)
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -65,13 +68,13 @@ plt.figure(figsize=(60, 20))
 # spring 데이터 그래프
 plt.plot(spring.index, spring['e_sum_load'], label='Spring 2020', marker='o', linestyle='-', color='b')
 
-# full 데이터 그래프
-plt.plot(full.index, full['e_sum_load'], label='Full 2020', marker='x', linestyle='-', color='r')
+# fall 데이터 그래프
+plt.plot(flal.index, fall['e_sum_load'], label='Fall 2020', marker='x', linestyle='-', color='r')
 
 # 그래프 설정
 plt.xlabel('e_tm')
 plt.ylabel('e_sum_load')
-plt.title('Comparison of e_sum_load: Spring 2020 vs Full 2020')
+plt.title('Comparison of e_sum_load: Spring 2020 vs Fall 2020')
 plt.legend()
 plt.grid(True)
 plt.xticks(rotation=45)
