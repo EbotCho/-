@@ -53,7 +53,7 @@ df = pd.read_excel("/content/fall_2020_data.xlsx")
 fall=pd.DataFrame(df)
 fall
 
-
+#한 공동주택의 가을 기간(8월7일~11월 6일)
 fall=fall.iloc[0:1708]
 #봄,가을 인덱스 맞추기 위함
 fall.reset_index(inplace=True)
@@ -69,7 +69,7 @@ plt.figure(figsize=(60, 20))
 plt.plot(spring.index, spring['e_sum_load'], label='Spring 2020', marker='o', linestyle='-', color='b')
 
 # fall 데이터 그래프
-plt.plot(flal.index, fall['e_sum_load'], label='Fall 2020', marker='x', linestyle='-', color='r')
+plt.plot(fall.index, fall['e_sum_load'], label='Fall 2020', marker='x', linestyle='-', color='r')
 
 # 그래프 설정
 plt.xlabel('e_tm')
@@ -91,7 +91,10 @@ df = pd.read_excel("/content/spring_2021_data.xlsx")
 
 spring=pd.DataFrame(df)
 spring
+
+#한 공동주택의 봄 기간(2월4일~5월 4일)
 spring=spring.iloc[2:2139]
+#봄,가을 인덱스 맞추기 위함
 spring.reset_index(inplace=True)
 spring
 len(spring)
@@ -100,16 +103,17 @@ len(spring)
 import pandas as pd
 
 # CSV 파일에서 데이터를 불러옵니다. 파일 경로를 적절히 수정하세요.
-df = pd.read_excel("/content/full_2021_data (1).xlsx")
+df = pd.read_excel("/content/fall_2021_data (1).xlsx")
 
-full=pd.DataFrame(df)
-full
-full=full.iloc[0:2187]
-len(full)
+fall=pd.DataFrame(df)
+fall
+#한 공동주택의 가을 기간(8월7일~11월 6일)
+fall=fall.iloc[0:2187]
+len(fall)
 
-full.drop([0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,51,52,53,54,55,56,57],axis=0,inplace=True)
-full.reset_index(inplace=True)
-len(full)
+fall.drop([0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,51,52,53,54,55,56,57],axis=0,inplace=True)
+fall.reset_index(inplace=True)
+len(fall)
 
 
 import pandas as pd
@@ -119,7 +123,7 @@ from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 
 spring['e_sum_load_scaled'] = scaler.fit_transform(spring[['e_sum_load']])
-full['e_sum_load_scaled'] = scaler.fit_transform(full[['e_sum_load']])
+fall['e_sum_load_scaled'] = scaler.fit_transform(fall[['e_sum_load']])
 
 # 그래프 그리기
 plt.figure(figsize=(60, 20))
@@ -127,13 +131,13 @@ plt.figure(figsize=(60, 20))
 # spring 데이터 그래프
 plt.plot(spring.index, spring['e_sum_load'], label='Spring 2021', marker='o', linestyle='-', color='b')
 
-# full 데이터 그래프
-plt.plot(full.index, full['e_sum_load'], label='Full 2021', marker='x', linestyle='-', color='r')
+# fall 데이터 그래프
+plt.plot(fall.index, fall['e_sum_load'], label='Fall 2021', marker='x', linestyle='-', color='r')
 
 # 그래프 설정
 plt.xlabel('e_tm')
 plt.ylabel('e_sum_load')
-plt.title('Comparison of e_sum_load: Spring 2021 vs Full 2021')
+plt.title('Comparison of e_sum_load: Spring 2021 vs Fall 2021')
 plt.legend()
 plt.grid(True)
 plt.xticks(rotation=45)
@@ -150,7 +154,9 @@ df = pd.read_excel("/content/spring_2022_data (1).xlsx")
 
 spring=pd.DataFrame(df)
 spring
+#한 공동주택의 봄 기간(2월4일~5월 4일)
 spring=spring.iloc[0:2139]
+#봄,가을 데이터 맞추기 위함
 spring.reset_index(inplace=True)
 len(spring)
 
@@ -160,16 +166,17 @@ import pandas as pd
 # CSV 파일에서 데이터를 불러옵니다. 파일 경로를 적절히 수정하세요.
 df = pd.read_excel("/content/fall_2022_data (1).xlsx")
 
-full=pd.DataFrame(df)
-full
-full=full.iloc[0:2211]
-full
-len(full)
+fall=pd.DataFrame(df)
+fall
+fall=fall.iloc[0:2211]
+fall
+len(fall)
 
-full.drop([0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69],axis=0,inplace=True)
-full.drop([70,72,75,76,77,78,79,80,81,82],axis=0,inplace=True)
-full.reset_index(inplace=True)
-len(full)
+fall.drop([0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69],axis=0,inplace=True)
+fall.drop([70,72,75,76,77,78,79,80,81,82],axis=0,inplace=True)
+#봄,가을 데이터 맞추기 위함
+fall.reset_index(inplace=True)
+len(fall)
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -178,7 +185,7 @@ from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 
 spring['e_sum_load_scaled'] = scaler.fit_transform(spring[['e_sum_load']])
-full['e_sum_load_scaled'] = scaler.fit_transform(full[['e_sum_load']])
+fall['e_sum_load_scaled'] = scaler.fit_transform(fall[['e_sum_load']])
 
 # 그래프 그리기
 plt.figure(figsize=(60, 20))
@@ -190,12 +197,12 @@ plt.figure(figsize=(60, 20))
 plt.plot(spring.index, spring['e_sum_load'], label='Spring 2022', marker='o', linestyle='-', color='b')
 
 # full 데이터 그래프
-plt.plot(full.index, full['e_sum_load'], label='Full 2022', marker='x', linestyle='-', color='r')
+plt.plot(fall.index, fall['e_sum_load'], label='Fall 2022', marker='x', linestyle='-', color='r')
 
 # 그래프 설정
 plt.xlabel('e_tm')
 plt.ylabel('e_sum_load')
-plt.title('Comparison of e_sum_load: Spring 2022 vs Full 2022')
+plt.title('Comparison of e_sum_load: Spring 2022 vs Fall 2022')
 plt.legend()
 plt.grid(True)
 plt.xticks(rotation=45)
